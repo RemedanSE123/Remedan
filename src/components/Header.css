@@ -1,0 +1,102 @@
+/* Importing Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Styling for the body */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;  /* Using Poppins for a modern, sleek font */
+    background-color: #0d1117; /* Dark background for the body */
+    color: #fff;
+}
+
+/* Basic navbar styling */
+.navbar {
+    background-color: #0d1117;  /* Slightly lighter background for the navbar */
+    padding: 10px 20px; /* Add some padding for better spacing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Subtle shadow for depth */
+}
+
+/* Align left side image and name */
+.header-left {
+    display: flex;
+    align-items: center;
+    margin-right: auto;  /* Pushes the image and name to the left */
+}
+
+.profile-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 20px;  /* Reduced space for better balance */
+    border: 3px solid #f39c12;  /* Border around the image for emphasis */
+    transition: transform 0.3s ease-in-out;  /* Add smooth hover effect */
+}
+
+/* Profile image hover effect */
+.profile-image:hover {
+    transform: scale(1.1);  /* Slight zoom effect on hover */
+}
+
+/* Name styling */
+.name {
+    color: #fff;
+    font-size: 20px;  /* Increased font size for prominence */
+    font-weight: 700;
+    letter-spacing: 1px;  /* Added space between letters */
+    text-transform: uppercase;  /* Make the name all uppercase for a bold look */
+    transition: color 0.3s ease;  /* Smooth color change effect */
+}
+
+/* Name hover effect */
+.name:hover {
+    color: #f39c12;  /* Gold color on hover */
+}
+
+/* Styling for navigation links */
+.navbar-nav .nav-link {
+    color: #fff;
+    font-size: 16px;
+    margin-left: 20px;  /* Space between navigation links */
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;  /* Smooth hover effect */
+    text-decoration: none;  /* Removed underline */
+}
+
+/* Navigation links hover effect */
+.navbar-nav .nav-link:hover {
+    color: #f39c12; /* Gold color on hover */
+    transform: translateY(-2px);  /* Slight upward movement on hover */
+}
+
+/* Adjust the navbar toggle button for smaller screens */
+.navbar-toggler-icon {
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+/* For mobile view, adjust image size and layout */
+@media (max-width: 768px) {
+    .header-left {
+        justify-content: center;
+        margin-top: 10px;
+    }
+    .profile-image {
+        width: 45px; /* Slightly smaller for mobile */
+        height: 45px;
+    }
+    .name {
+        font-size: 18px;  /* Adjusted font size for smaller screens */
+    }
+    .navbar-nav .nav-link {
+        font-size: 14px;  /* Smaller font size for mobile */
+    }
+}
+
+/* Smooth scroll effect */
+.smooth-scroll {
+    transition: all 0.3s ease;
+}
+
+.smooth-scroll:hover {
+    color: #f39c12;  /* Gold color on hover */
+}

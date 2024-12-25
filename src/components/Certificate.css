@@ -1,0 +1,105 @@
+#certificate {
+  background-color: #0d1117;
+  color: #ffffff;
+  padding: 60px 0;
+}
+
+.text-highlight {
+  color: #ff9800;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.certificate-card {
+  background: #1c2026;
+  border-radius: 12px;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.certificate-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.certificate-image {
+  width: 100%;
+  height: 400px; /* Set fixed height for both image and pdf */
+  border-radius: 12px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+.certificate-title {
+  color: #ff9800;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.certificate-issuer,
+.certificate-date {
+  color: #cccccc;
+  font-size: 0.9rem;
+}
+
+.show-all-btn {
+  background-color: #ff9800;
+  color: 0d1117;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.show-all-btn:hover {
+  background-color: #e68900;
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.modal-img {
+  width: 100%;
+  height: auto;
+  max-height: 80vh; /* Ensures the image doesn't overflow */
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.modal-iframe {
+  width: 100%;
+  height: 80vh; /* Set height to fit the PDF */
+  border: none;
+}
+
+.modal-content:focus {
+  outline: none;
+}
+
+/* Allow scrolling if content exceeds modal */
+.modal-content {
+  overflow: auto;
+}

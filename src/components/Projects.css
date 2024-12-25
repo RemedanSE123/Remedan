@@ -1,0 +1,207 @@
+
+
+
+
+/* General Styling */
+#projects {
+  background-color: #0d1117;
+  font-family: 'Pangram Sans', sans-serif;
+  gap: 50px;
+}
+
+h2 {
+  font-family: 'Pangram Sans', sans-serif;
+  font-weight: 700;
+  color: #ff9800; /* Using a warm contrast color */
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Added a subtle shadow for text */
+}
+
+.project-card {
+  border: none;
+  background: #1c2026; /* Dark background to contrast the main background */
+  border-radius: 12px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden; /* Ensures the image fills the top without overflow */
+  padding: -0; /* Remove padding to eliminate extra space */
+  margin-bottom: 0; /* Remove the bottom margin from the card */
+}
+
+.project-card:hover {
+  transform: scale(1.05); /* Slightly larger hover effect */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Softer shadow */
+}
+
+.project-image {
+  width: 100%;
+  height: 200px; /* Adjust height as necessary */
+  object-fit: cover; /* Ensures the image fully covers the area */
+  object-position: top; /* Aligns image to the top */
+}
+
+.project-title {
+  font-family: 'Pangram Sans', sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #ff9800;
+  margin-top: 15px;
+}
+
+.project-description {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.5rem;
+  color: #fff;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+.btn-warning {
+  background-color: #ff9800;
+  color: #0d1117;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+.btn-warning:hover {
+  background-color: #e68900;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+/* Remove side gaps */
+.row {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.col-lg-4,
+.col-md-8 {
+  padding-left: 0;
+  padding-right: 0;
+  margin-bottom: 0; /* Remove bottom margin between columns */
+}
+
+/* Remove space between cards */
+.row > .col-lg-4 {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .project-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .project-image {
+    height: 150px; /* Adjust image height for smaller screens */
+  }
+
+  .project-title {
+    font-size: 1.5rem;
+  }
+
+  .project-description {
+    font-size: 0.9rem;
+  }
+
+  .btn-warning {
+    padding: 8px 16px;
+  }
+}
+li a {
+  display: inline-flex; /* Align icons horizontally */
+  align-items: center; /* Vertically center the icons */
+  justify-content: center; /* Center content within */
+  margin-top: 10px;
+  padding: 12px 5px;
+
+  color: #ffffff; /* Icon color */
+  border-radius: 8px; /* Rounded edges for the background */
+  transition: all 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Modal overlay with full-screen and blur effect */
+.popup-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000; /* Ensure it sits above everything, including the navbar */
+  backdrop-filter: blur(10px); /* Blur effect for everything in the background */
+  overflow: hidden; /* Prevent scrolling of the background */
+}
+
+/* Modal content box */
+.popup-content {
+  background: #0d1117;
+  padding: 30px;
+  width: 90%;
+  max-height: 90%;
+  overflow-y: auto; /* Allow only the modal to scroll */
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.popup-modal .close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px 15px;
+  font-size: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.popup-modal .close-btn:hover {
+  background: #e60000;
+}
+
+
+/* Add smooth fade-in effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Prevent background scrolling when modal is open */
+body.modal-open {
+  overflow: hidden;
+}

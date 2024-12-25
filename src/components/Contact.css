@@ -1,0 +1,92 @@
+#contact {
+    padding: 60px 0;
+    background-color: #0d1117;
+    color: #ffffff;
+  }
+  
+  h2 {
+    font-family: "Pangram Sans", sans-serif;
+    font-weight: 700;
+    color: #ff9800;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .map-container {
+    height: 100%;
+    max-height: 435px; /* Adjust based on preference */
+    overflow: hidden;
+    border-radius: 12px;
+  }
+  
+  form {
+    font-family: "Pangram Sans", sans-serif;
+    border-radius: 12px;
+  }
+  
+  form .form-label {
+    text-align: left; /* Aligns text to the left */
+    display: block; /* Ensures label stays on its own line */
+    color: #ff9800; /* Label color */
+    font-weight: bold; /* Bold text for labels */
+  }
+  
+  form input,
+  form textarea {
+    background-color: #1c2026;
+    color: #ffffff;
+    border: 1px solid #ff9800;
+    border-radius: 6px;
+  }
+  
+  form input:focus,
+  form textarea:focus {
+    outline: none;
+    box-shadow: 0 0 5px #ff9800;
+    border-color: #ff9800;
+  }
+  
+  form .btn-warning {
+    background-color: #ff9800;
+    color: #0d1117;
+    font-weight: bold;
+  }
+  
+  form .btn-warning:hover {
+    background-color: #e68900;
+  }
+  
+/* Social Links Container */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Space between each icon */
+  margin-top: 10px;
+}
+
+/* Individual Social Link */
+.social-links a {
+  color: #ffffff; /* Default icon color */
+  font-size: 1.5rem; /* Icon size */
+  text-decoration: none; /* Remove underline */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px; /* Circle width */
+  height: 50px; /* Circle height */
+  border-radius: 50%; /* Makes the link circular */
+  background-color: #1c2026; /* Background color */
+  transition: all 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+/* Hover Effect */
+.social-links a:hover {
+  color: #ff9800; /* Icon color on hover */
+  background-color: #2a2f36; /* Slightly lighter background */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add shadow effect */
+}
+
+/* Icon Alignment */
+.social-links a i {
+  margin: 0; /* Ensure icons are centered */
+}

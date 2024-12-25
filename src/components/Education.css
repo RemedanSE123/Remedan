@@ -1,0 +1,212 @@
+/* Main Section Styling */
+.education-section {
+  background-color: #0d1117; /* Light background for contrast */
+  padding: 100px 20px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+}
+
+.section-title {
+  font-size: 3.5rem; /* Increased size for better visibility */
+  font-weight: 800;
+  color: #f39c12; /* Bright orange color */
+  margin-bottom: 40px;
+  text-transform: capitalize; /* Soft capitalization */
+  letter-spacing: 1.5px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif; /* Modern, clean font */
+  position: relative;
+}
+
+.section-title::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 4px;
+  background: #f39c12; /* Same color as the text */
+  border-radius: 2px;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -15px;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 2px;
+  background: #e2e2e2; /* Subtle contrast color */
+  border-radius: 2px;
+  opacity: 0.6;
+}
+
+/* Optional: Add an entry animation */
+.section-title {
+  animation: fadeInTitle 1.5s ease-out;
+}
+
+@keyframes fadeInTitle {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Container for all Education Items */
+.education-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  position: relative;
+}
+
+/* Individual Education Item */
+.education-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 850px;
+  width: 100%;
+  padding: 20px;
+  background-color: #0d1117;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
+  position: relative;
+}
+
+.education-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover Effects for the Education Item */
+.education-item:hover {
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.edu-logo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 50%;
+  margin-right: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.edu-logo:hover {
+  transform: scale(1.1) rotate(15deg);
+}
+
+/* Education Details Section */
+.edu-details {
+  flex: 1;
+  text-align: left;
+  padding-left: 20px;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.short-paragraph {
+  font-size: 1.2rem;
+  color: #fff;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  font-size: 1rem;
+  color: #e2e2e2;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+/* Add animation to show the ropes (connecting the logos) */
+.rope {
+  position: absolute;
+  width: 2px;
+  background-color: #007bff; /* Rope color */
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: height 1s ease;
+}
+
+/* Height adjustments for the connecting ropes between cards */
+.education-container {
+  position: relative;
+}
+
+.education-item:first-child .rope {
+  height: 80%; /* Adjust this height for the first item */
+}
+
+.education-item:nth-child(2) .rope {
+  height: 80%; /* Adjust this height for the second item */
+}
+
+.education-item:nth-child(3) .rope {
+  height: 80%; /* Adjust this height for the third item */
+}
+
+/* Fade in effect for rope animation */
+.education-item.visible .rope {
+  height: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .education-container {
+    gap: 40px;
+  }
+
+  .edu-logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  h3 {
+    font-size: 1.6rem;
+  }
+
+  .short-paragraph {
+    font-size: 1rem;
+  }
+}
+
+
+
